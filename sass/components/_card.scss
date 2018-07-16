@@ -1,0 +1,91 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 20rem;
+    min-width: 70%;
+    margin: 3rem;
+    cursor: pointer;
+
+    @include respond(first) {
+        height: 28rem;
+    }
+
+    @include respond(second) {
+        height: 16rem;
+    }
+
+    // @include respond(medium) {
+    //     height: 18rem;
+    //     width: 14rem;
+    // }
+
+    // @include respond(med-small) {
+    //     height: 12rem;
+    //     width: 12rem;
+    // }
+
+    // @include respond(small) {
+    //     height: 10rem;
+    //     width: 10rem;
+    // }
+
+    &__side {
+        // width: 18rem;
+        min-width: 100%;
+        height: 20rem;
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden; 
+        text-align: center;
+        border-radius: 0.4rem;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+        @include respond(first) {
+            height: 18rem;
+        }
+
+        @include respond(second) {
+            height: 16rem;
+        }
+
+        // @include respond(medium) {
+        //     height: 18rem;
+        //     width: 14rem;
+        // }
+
+        // @include respond(med-small) {
+        //     height: 12rem;
+        //     width: 12rem;
+        // }
+
+        // @include respond(small) {
+        //     height: 10rem;
+        //     width: 10rem;
+        // }
+
+        &--front {
+            background-image: linear-gradient($color-grey-1, $color-grey-3);
+            z-index: 10;
+            position: absolute;
+        }
+    
+        &--back {
+            background-color: $color-black;
+            transform: rotateY(-180deg);
+            font-size: 2rem;
+
+        }
+
+        &--front--flip {
+            transform: rotateY(180deg);
+        }
+
+        &--back--flip {
+            transform: rotateY(0);
+        }
+    }    
+}

@@ -1,0 +1,23 @@
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    } 
+}
+
+@mixin respond ($breakpoint) {
+    @if $breakpoint == first {
+        @media (max-width: 1392px) { @content };
+    }
+
+    @if $breakpoint == second {
+        @media (max-width: 1184px) { @content };
+    }
+
+    @if $breakpoint == small {
+        @media (max-width: 914px) { @content };
+    }
+
+   
+}

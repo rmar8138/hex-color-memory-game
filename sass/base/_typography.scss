@@ -1,0 +1,29 @@
+body {
+    font-family: Lato, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-black;
+    text-rendering: optimizeLegibility;
+}
+
+.heading-primary {
+    font-weight: 100;
+    font-size: 6rem;
+    line-height: 1;
+
+    @include respond(second) {
+        font-size: 4.5rem;
+    }
+}
+
+.heading-secondary {
+    font-weight: 300;
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.heading-tertiary {
+    font-weight: 300;
+    font-size: 3.5rem;
+    line-height: 1;
+}
