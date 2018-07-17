@@ -1,33 +1,52 @@
 .sidebar {
     font-size: 2rem;
-    height: 100vh;
-    width: 20%;
+    width: 100%;
+    height: auto;
     background-color: $color-grey-1;
     opacity: 0.8;
+    text-align: center;
+    padding: 3rem 0;
+
+    @include respond (large) {
+    height: 100vh;
+    width: 20%;
     position: absolute;
     top: 0;
     right: 0;
     padding: 4rem 2rem;
-    text-align: center;
     z-index: 100;
     overflow: hidden;
+    }
+
+    &__help {
+        margin-bottom: -2rem;
+        font-size: 3rem; 
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $color-grey-3;
+        }
+
+        @include respond (large) {
+            display: none;
+        }
+    }
 
     &__instructions,
     &__score,
     &__difficulty {
-        margin: 5rem 0;
+        display: none;
+
+        @include respond (large) {
+            display: block;
+            margin-top: 4rem;
+        }
     }
 
     &__score-number,
     &__message {
         font-weight: 100;
         font-size: 4rem;
-    }
-
-    &__difficulty-input {
-        width: 30%;
-        height: 4rem;
-        text-align: center;
-        font-size: 2rem;
     }
 }

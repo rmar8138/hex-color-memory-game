@@ -11,24 +11,23 @@
 </head>
 <body>
     <div class="game">
-            <nav class="sidebar">
-                    <div class="row">
-                        <h1 class="heading-primary">Hex Memory Game</h1>
-                        <p class="sidebar__instructions">
-                            Match the hex colours until there are no more cards left!
-                        </p>
-                        <div class="sidebar__score">
-                            <h3 class="heading-secondary u-margin-bottom-sm">Cards left:</h3>
-                            <span class="sidebar__score-number"></span>
-                        </div>
-                        <div class="sidebar__message"></div>
-                        <footer class="footer">
-                            <div class="footer__copyright">
-                                <p>&copy; 2018 Ragan Martinez</p>
-                            </div>
-                        </footer>
-                    </div>
-                </nav>
+        <nav class="sidebar">      
+            <h1 class="heading-primary">Hex Memory Game</h1>
+            <ion-icon name="menu" class="sidebar__help"></ion-icon>    
+            <p class="sidebar__instructions">
+                Match the hex colours until there are no more cards left!
+            </p>
+            <div class="sidebar__score">
+                <h3 class="heading-secondary u-margin-bottom-sm">Cards left:</h3>
+                <span class="sidebar__score-number"></span>
+            </div>
+            <div class="sidebar__message"></div>
+            <footer class="footer">
+                <div class="footer__copyright">
+                    <p>&copy; 2018 Ragan Martinez</p>
+                </div>
+            </footer>
+        </nav>
         <div class="container">
             <!-- <div class="card card-%0%">
                 <div class="card__side card__side--front">
@@ -41,7 +40,18 @@
             
         </div>
     </div>
+    <div class="popup">
+        <span class="popup__close"><a href="#">&times;</a></span>
+        <h2 class="heading-secondary">Hex Memory Game</h2>
+        <p class="popup__instructions">
+            Match the hex colours until there are no more cards left!
+        </p>
+        <div class="popup__copyright">
+            <p>&copy; 2018 Ragan Martinez</p>
+        </div>
+    </div>
 
-<script src="app.js"></script>
+    <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

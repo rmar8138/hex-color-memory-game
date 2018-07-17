@@ -41,9 +41,21 @@ const model = (function() {
 
 const view = (function() {
     const cardContainer = document.querySelector('.container');
+    const game = document.querySelector('.game');
+    const popup = document.querySelector('.popup');
     const HTMLCardTemplate = '<div class="card"><div id="%0%" class="card__side card__side--front">&nbsp;</div><div class="card__side card__side--back">%hex%</div></div>'
 
     return {
+        showMenu: function() {
+            popup.classList.add('visible');
+            game.classList.add('disable');
+        },
+
+        closeMenu: function() {
+            popup.classList.remove('visible');
+            game.classList.remove('disable');
+        },
+
         showCards: function(cardList) {
             var cardBackNodeList, cardBackArray;
     
@@ -108,8 +120,12 @@ const controller = (function(model, view) {
 
     function setEventListeners() {
         const card = document.querySelector('.game');
+        const menuButton = document.querySelector('.sidebar__help');
+        const closeButton = document.querySelector('.popup__close');
 
         card.addEventListener('click', cardSelect);
+        menuButton.addEventListener('click', view.showMenu);
+        closeButton.addEventListener('click', view.closeMenu);
     }
 
     function cardSelect(e) {

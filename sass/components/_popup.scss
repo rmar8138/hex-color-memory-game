@@ -1,0 +1,58 @@
+.popup {
+    position: fixed;
+    background-color: $color-grey-1;
+    opacity: 0.8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    height: auto;
+    padding: 2rem;
+    z-index: 10000;
+    display: none;
+    opacity: 0;
+    transition: all 0.2s;
+
+    @include respond (medium-large) {
+        width: 46rem;
+    }
+
+    &__close a {
+        &:link,
+        &:visited {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            display: inline-block;
+            line-height: 1;
+            font-size: 2rem;
+            text-decoration: none;
+            color: $color-black;
+            transition: color 0.2s;
+        }
+
+        &:hover {
+            color: $color-grey-2;
+        }
+    }
+
+    &__instructions {
+        display: inline-block;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+
+        @include respond (medium-large) {
+            font-size: 2rem;
+        }
+    }
+
+    &__copyright {
+        margin-top: 2rem;
+    }
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
