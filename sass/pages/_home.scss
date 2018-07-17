@@ -9,11 +9,6 @@ body {
 .game {
     width: 80%;
     height: 100vh;
-
-    @include respond (small) {
-        width: 100%;
-        height: auto;
-    }
 }
 
 .container {
@@ -30,11 +25,4 @@ body {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
-
-    @include respond (small) {
-        width: 100%;
-        height: auto;
-        padding: 2rem;
-        padding-top: 30%;
-    }
 }

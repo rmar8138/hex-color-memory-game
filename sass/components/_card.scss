@@ -7,29 +7,6 @@
     margin: 3rem;
     cursor: pointer;
 
-    @include respond(first) {
-        height: 28rem;
-    }
-
-    @include respond(second) {
-        height: 16rem;
-    }
-
-    // @include respond(medium) {
-    //     height: 18rem;
-    //     width: 14rem;
-    // }
-
-    // @include respond(med-small) {
-    //     height: 12rem;
-    //     width: 12rem;
-    // }
-
-    // @include respond(small) {
-    //     height: 10rem;
-    //     width: 10rem;
-    // }
-
     &__side {
         // width: 18rem;
         min-width: 100%;
